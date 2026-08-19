@@ -3,6 +3,11 @@
 <!-- Published Mar 24, 2026, 11:20 PM UTC -->
 <html lang="en-US">
 <head>
+
+<script>
+  window.__framer_disable_appear_effects_optimization__ = true;
+</script>
+
 	<meta charset="utf-8">
 	
 	
@@ -578,6 +583,57 @@
     color: #ffffff !important;
     overflow-x: hidden;
     scroll-behavior: smooth;
+  }
+
+  
+  /* ==========================================================
+     FORCE IMMEDIATE VISIBILITY ACROSS ALL FRAMER CONTAINERS
+     ========================================================== */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    opacity: 1 !important;
+    visibility: visible !important;
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  #main,
+  #main *,
+  .framer-suzJm,
+  .framer-jwQTQ,
+  .framer-1a6x0m0,
+  .framer-1a6x0m0-container,
+  .framer-eumtsr-container,
+  .framer-1f1fssz,
+  .framer-mxkf59,
+  .framer-tu9cks,
+  [data-framer-appear-id],
+  [data-framer-name] {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* Responsive visibility for Framer SSR variants */
+  @media (min-width: 1200px) {
+    .hidden-h7qui, .hidden-v1j9k2, .hidden-1v36vhg {
+      display: none !important;
+    }
+  }
+  @media (min-width: 810px) and (max-width: 1199.98px) {
+    .hidden-72rtr7, .hidden-1v36vhg, .hidden-1kjwutx {
+      display: none !important;
+    }
+  }
+  @media (max-width: 809.98px) {
+    .hidden-72rtr7, .hidden-v1j9k2, .hidden-1kjwutx, .hidden-1jtl6r4 {
+      display: none !important;
+    }
   }
 
   /* 1. Translucent Floating Glass Navbar */
