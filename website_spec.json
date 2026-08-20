@@ -1,0 +1,285 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "project": {
+    "name": "Sangam Portfolio - Video Editor & Growth Partner",
+    "type": "High-Retention Video Editing & Creative Agency Portfolio",
+    "techStack": {
+      "bundler": "Vite",
+      "framework": "Vanilla HTML5 / CSS3 / JavaScript (Standalone)",
+      "hosting": "Vercel",
+      "font": "Figtree (Google Fonts)"
+    },
+    "repository": "https://github.com/sangam92143-spec/sangamportfolio.git",
+    "deploymentUrl": "https://sangamportfolio-jade.vercel.app/"
+  },
+  "metadata": {
+    "title": "Sangam - High-Retention Video Editor & Growth Partner",
+    "description": "Sangam Singh - High-retention video editing for top creators and brands. Reels, Shorts, YouTube long-form, podcasts, and narrative documentaries.",
+    "author": "Sangam Singh",
+    "contact": {
+      "email": "sangam.work9@gmail.com",
+      "phone": "+91 6289928084",
+      "avatar": "/avatar.png"
+    }
+  },
+  "designSystem": {
+    "colors": {
+      "background": "#000000",
+      "cardBackground": "rgba(10, 14, 26, 0.85)",
+      "primaryRoyalBlue": "#2563eb",
+      "brightElectricBlue": "#3b82f6",
+      "softSkyBlue": "#60a5fa",
+      "deepBlueAccent": "#1d4ed8",
+      "surfaceBorder": "rgba(59, 130, 246, 0.22)",
+      "surfaceBorderHover": "rgba(96, 165, 250, 0.55)",
+      "textPrimary": "#ffffff",
+      "textSecondary": "rgba(255, 255, 255, 0.75)",
+      "textMuted": "rgba(255, 255, 255, 0.55)",
+      "starYellow": "#fbbf24",
+      "successGreen": "#10b981"
+    },
+    "typography": {
+      "fontFamily": "'Figtree', -apple-system, BlinkMacSystemFont, sans-serif",
+      "weights": [400, 500, 600, 700, 800]
+    },
+    "effects": {
+      "glassmorphism": "backdrop-filter: blur(28px) saturate(190%)",
+      "cardBlur": "backdrop-filter: blur(20px)",
+      "cardGradient": "linear-gradient(145deg, rgba(15, 23, 42, 0.85) 0%, rgba(10, 14, 26, 0.95) 55%, rgba(37, 99, 235, 0.16) 100%)",
+      "buttonShadow": "0 4px 16px rgba(255, 255, 255, 0.25)",
+      "glowShadow": "0 0 35px rgba(37, 99, 235, 0.35)",
+      "starryParticles": {
+        "enabled": true,
+        "count": 130,
+        "color": "#ffffff",
+        "speed": 0.35,
+        "twinkle": true
+      }
+    }
+  },
+  "sections": {
+    "navbar": {
+      "type": "Floating Glass Pill",
+      "logo": {
+        "text": "Sangam",
+        "avatar": "/avatar.png"
+      },
+      "links": [
+        { "label": "Services", "href": "#services" },
+        { "label": "About", "href": "#about" },
+        { "label": "Contact", "href": "#booking-widget-section" }
+      ],
+      "ctaButton": {
+        "text": "Book a Call",
+        "href": "#booking-widget-section",
+        "style": "white-pill-black-text"
+      }
+    },
+    "hero": {
+      "badge": "High-Retention Video Editor & Growth Partner",
+      "headline": "I edit videos that capture attention, build trust, and scale your brand",
+      "subheadline": "Helping creators and tech businesses convert viewers into loyal fans and paying clients with data-driven storytelling and high-retention editing.",
+      "primaryCTA": {
+        "text": "Book a Discovery Call",
+        "href": "#booking-widget-section"
+      },
+      "secondaryCTA": {
+        "text": "View Work",
+        "href": "#custom-shortform-section"
+      },
+      "socialProofStats": [
+        { "metric": "10M+", "label": "Total Organic Views" },
+        { "metric": "85%+", "label": "Avg. Retention Rate" },
+        { "metric": "24-48h", "label": "Turnaround Time" }
+      ]
+    },
+    "shortFormCarousel": {
+      "id": "custom-shortform-section",
+      "heading": "Short-Form That Hooks & Converts",
+      "subheading": "High-retention Reels, TikToks & Shorts engineered with 3-second visual reset patterns to maximize watch time and viral reach.",
+      "visibleVideosCount": 3,
+      "videos": [
+        {
+          "id": "video-1",
+          "title": "Viral Hook Breakdown",
+          "youtubeId": "dQw4w9WgXcQ",
+          "tag": "Reels / TikTok",
+          "views": "1.2M Views"
+        },
+        {
+          "id": "video-2",
+          "title": "Tech Founder Storytelling",
+          "youtubeId": "dQw4w9WgXcQ",
+          "tag": "Personal Brand",
+          "views": "850K Views"
+        },
+        {
+          "id": "video-3",
+          "title": "Kinetic Typography Reel",
+          "youtubeId": "dQw4w9WgXcQ",
+          "tag": "Motion Graphics",
+          "views": "2.4M Views"
+        },
+        {
+          "id": "video-4",
+          "title": "Podcast Micro-Clip",
+          "youtubeId": "dQw4w9WgXcQ",
+          "tag": "Podcast Cut",
+          "views": "640K Views"
+        },
+        {
+          "id": "video-5",
+          "title": "Product Launch Short",
+          "youtubeId": "dQw4w9WgXcQ",
+          "tag": "Brand Promo",
+          "views": "990K Views"
+        }
+      ]
+    },
+    "problemSection": {
+      "id": "problem-section",
+      "heading": "Why Most Creators & Brands Struggle to Scale",
+      "subheading": "Creating content isn't the problem — retention, pacing, and converting views into business is.",
+      "cards": [
+        {
+          "title": "Views That Don't Convert",
+          "description": "Millions of empty views with zero follower loyalty, leads, or inbound sales.",
+          "badge": "0% Retention Drop",
+          "animationType": "floating-drop-badge"
+        },
+        {
+          "title": "Likes Don't Pay The Bills",
+          "description": "Surface-level vanity metrics that look good on paper but fail to build true authority or paying clients.",
+          "badge": "+1.2K Likes • 0 Leads",
+          "animationType": "floating-likes-pill"
+        },
+        {
+          "title": "No System, No Consistency",
+          "description": "Posting randomly without structured hooks and narrative editing leads to burnout and flatlining growth.",
+          "badge": "Growth Plateau",
+          "animationType": "active-posting-dots"
+        }
+      ]
+    },
+    "longFormSection": {
+      "heading": "Long-Form YouTube & Documentaries",
+      "subheading": "Engaging YouTube videos, documentaries & podcasts with dynamic pacing, sound design, and narrative retention.",
+      "categories": ["YouTube Long-Form", "Podcasts", "Narrative Documentaries", "Case Studies"]
+    },
+    "testimonials": {
+      "heading": "Why Creators & Brands Love My Editing",
+      "subheading": "Real businesses, real results",
+      "cards": [
+        {
+          "name": "Johnny Sanchez",
+          "position": "Founder of Beyond Media",
+          "avatar": "https://framerusercontent.com/images/YdiJK6SERIlrzR3Fm3GFmlEttkE.png?width=584&height=584",
+          "rating": 5,
+          "quote": "Working with Sangam saved us hours of in-house editing. He brings creative ideas to the table and always delivers on time."
+        },
+        {
+          "name": "Jet Suthpring",
+          "position": "Founder of Magnet Media",
+          "avatar": "https://framerusercontent.com/images/bSfMpXoQta2GfVknPdFF8hRJ8.png?width=594&height=594",
+          "rating": 5,
+          "quote": "From YouTube vlogs to promo videos, Sangam nails the vibe every time. He understands the creator mindset and delivers magic."
+        },
+        {
+          "name": "Aniket",
+          "position": "Budget Analyst & Tax Professional",
+          "avatar": "https://framerusercontent.com/images/SRaYDUlRDutFR6rv1klplNOo6YU.png?width=893&height=893",
+          "rating": 5,
+          "quote": "The pacing, retention hooks, and sound design elevated our video views by over 300%. Absolutely indispensable editing partner."
+        },
+        {
+          "name": "Sarah Miller",
+          "position": "Tech & Lifestyle Creator",
+          "avatar": "https://framerusercontent.com/images/qv8zFVfQxct8tTy7JlgxpD8Dc8.png?width=864&height=864",
+          "rating": 5,
+          "quote": "Sangam is by far the fastest and most detail-oriented video editor I've worked with. Flawless execution on every single project."
+        }
+      ]
+    },
+    "bookingWidget": {
+      "id": "booking-widget-section",
+      "heading": "Schedule a 20-Min Video Growth Strategy Call",
+      "subheading": "Select a day and time below to discuss your content roadmap, footage audit, and custom editing retainer.",
+      "features": [
+        "100% In-Page Booking (Zero External Redirects)",
+        "Interactive Date Picker & Real-Time Time Slot Selector",
+        "Instant Email & Calendar Confirmation Card"
+      ],
+      "availableDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "timeSlots": ["10:00 AM", "11:30 AM", "02:00 PM", "03:30 PM", "05:00 PM", "06:30 PM"],
+      "formFields": [
+        { "name": "fullName", "type": "text", "label": "Full Name", "required": true },
+        { "name": "email", "type": "email", "label": "Email Address", "required": true },
+        { "name": "phone", "type": "tel", "label": "Phone Number / WhatsApp", "required": true },
+        { "name": "projectNotes", "type": "textarea", "label": "Channel / Project Link & Goals", "required": false }
+      ]
+    },
+    "faqSection": {
+      "heading": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "What is your turnaround time for video edits?",
+          "answer": "For Short-Form videos (Reels, Shorts, TikToks), turnaround is typically 24-48 hours. For Long-Form YouTube videos (10-25 mins), turnaround is 3-4 business days including sound design, color grading, and motion graphics."
+        },
+        {
+          "question": "How do we transfer footage and assets?",
+          "answer": "We use Google Drive, Dropbox, Frame.io, or MASV for lightning-fast, lossless file transfers. You simply upload your raw footage and we handle the rest."
+        },
+        {
+          "question": "How do revisions work?",
+          "answer": "Every project includes 2 rounds of free revisions using timestamped review tools like Frame.io, ensuring the final video matches your exact vision."
+        },
+        {
+          "question": "What software and toolchain do you edit in?",
+          "answer": "We edit professionally using Adobe Premiere Pro, After Effects, DaVinci Resolve Studio (for cinematic color grading), and Photoshop/Illustrator for custom thumbnails and graphic assets."
+        },
+        {
+          "question": "Do you offer monthly retainer packages?",
+          "answer": "Yes! Most creators and brands work with us on monthly retainers (e.g. 12, 20, or 30 short-form reels/month, or 4-8 long-form YouTube videos/month) for dedicated priority bandwidth and lower per-video costs."
+        }
+      ]
+    },
+    "footer": {
+      "brand": "Sangam",
+      "tagline": "High-Retention Video Editor & Creative Growth Partner",
+      "email": "sangam.work9@gmail.com",
+      "phone": "+91 6289928084",
+      "copyright": "© 2026 Sangam Singh. All rights reserved."
+    },
+    "geminiAIChatbot": {
+      "id": "sangam-ai-widget",
+      "name": "Sangam AI",
+      "engine": "Google Gemini",
+      "position": "bottom-right",
+      "greeting": "Hey! I'm Sangam's AI assistant powered by Gemini. Ask me about high-retention video editing, Reels & Shorts hooks, or schedule a strategy call!",
+      "quickChips": [
+        { "label": "🎬 Editing Style", "query": "Tell me about your editing style" },
+        { "label": "⚡ Short-Form Hooks", "query": "How do you increase short-form retention?" },
+        { "label": "💰 Pricing", "query": "What is your pricing?" },
+        { "label": "📅 Book a Call", "query": "I want to book a call" }
+      ],
+      "knowledgeBase": {
+        "specialties": [
+          "High-retention storytelling",
+          "3-second hook optimization",
+          "Dynamic pacing & micro-cuts",
+          "Immersive sound design & SFX",
+          "Kinetic typography & motion graphics"
+        ],
+        "pricingModels": [
+          "Short-Form Packs (10-30 Reels/mo, 24-48h turnaround)",
+          "Full End-to-End YouTube Long-Form editing",
+          "Dedicated monthly retainers for high-volume creators"
+        ],
+        "contact": {
+          "email": "sangam.work9@gmail.com",
+          "phone": "+91 6289928084"
+        }
+      }
+    }
+  }
+}
