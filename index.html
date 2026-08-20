@@ -204,7 +204,7 @@
     position: relative !important;
   }
 
-  /* Particles Canvas Background */
+  /* Starry Particle Canvas Background */
   #sangam-particles-canvas {
     position: fixed !important;
     top: 0 !important;
@@ -213,12 +213,101 @@
     height: 100vh !important;
     pointer-events: none !important;
     z-index: 0 !important;
-    opacity: 0.85 !important;
+    opacity: 0.95 !important;
   }
 
   #main {
     position: relative !important;
     z-index: 1 !important;
+  }
+
+  /* ================= HERO WORD-BY-WORD HEADING ANIMATIONS ================= */
+  @keyframes heroWordReveal {
+    0% {
+      opacity: 0;
+      transform: translateY(24px) scale(0.95);
+      filter: blur(8px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0px);
+    }
+  }
+
+  .framer-187ailk h1 span {
+    display: inline-block !important;
+    opacity: 0;
+    animation: heroWordReveal 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    will-change: transform, opacity, filter;
+  }
+
+  .framer-187ailk h1 span:nth-child(1) { animation-delay: 0.05s; }
+  .framer-187ailk h1 span:nth-child(2) { animation-delay: 0.12s; }
+  .framer-187ailk h1 span:nth-child(3) { animation-delay: 0.19s; }
+  .framer-187ailk h1 span:nth-child(4) { animation-delay: 0.26s; }
+  .framer-187ailk h1 span:nth-child(6) { animation-delay: 0.35s; }
+  .framer-187ailk h1 span:nth-child(7) { animation-delay: 0.42s; }
+  .framer-187ailk h1 span:nth-child(8) { animation-delay: 0.49s; }
+
+  .framer-18epya1 p span {
+    display: inline-block !important;
+    opacity: 0;
+    animation: heroWordReveal 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    will-change: transform, opacity, filter;
+  }
+  .framer-18epya1 p span:nth-child(1) { animation-delay: 0.52s; }
+  .framer-18epya1 p span:nth-child(2) { animation-delay: 0.56s; }
+  .framer-18epya1 p span:nth-child(3) { animation-delay: 0.60s; }
+  .framer-18epya1 p span:nth-child(4) { animation-delay: 0.64s; }
+  .framer-18epya1 p span:nth-child(5) { animation-delay: 0.68s; }
+  .framer-18epya1 p span:nth-child(6) { animation-delay: 0.72s; }
+  .framer-18epya1 p span:nth-child(7) { animation-delay: 0.76s; }
+  .framer-18epya1 p span:nth-child(8) { animation-delay: 0.80s; }
+  .framer-18epya1 p span:nth-child(9) { animation-delay: 0.84s; }
+  .framer-18epya1 p span:nth-child(10) { animation-delay: 0.88s; }
+  .framer-18epya1 p span:nth-child(11) { animation-delay: 0.92s; }
+
+  /* ================= HERO ROTATING NEBULA GLOWING ORBS ================= */
+  @keyframes rotateOrbBig {
+    0% { transform: rotate(0deg) scale(1); opacity: 0.7; }
+    50% { transform: rotate(180deg) scale(1.15); opacity: 0.95; }
+    100% { transform: rotate(360deg) scale(1); opacity: 0.7; }
+  }
+
+  @keyframes rotateOrbSmall {
+    0% { transform: translate(-50%, -50%) rotate(360deg) scale(0.9); opacity: 0.6; }
+    50% { transform: translate(-50%, -50%) rotate(180deg) scale(1.1); opacity: 0.85; }
+    100% { transform: translate(-50%, -50%) rotate(0deg) scale(0.9); opacity: 0.6; }
+  }
+
+  .framer-v5tokv {
+    position: absolute !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+  }
+  .framer-q5ecxp {
+    animation: rotateOrbBig 14s linear infinite !important;
+    background: radial-gradient(circle, rgba(129, 74, 200, 0.4) 0%, rgba(37, 99, 235, 0.2) 45%, transparent 70%) !important;
+    filter: blur(40px) !important;
+    will-change: transform, opacity;
+  }
+  .framer-1mwerlq {
+    animation: rotateOrbSmall 10s linear infinite !important;
+    background: radial-gradient(circle, rgba(223, 122, 254, 0.35) 0%, rgba(99, 102, 241, 0.2) 50%, transparent 70%) !important;
+    filter: blur(35px) !important;
+    will-change: transform, opacity;
+  }
+
+  /* ================= BOX & CARD HOVER / AMBIENT ANIMATIONS ================= */
+  .framer-s0rhwo, [data-framer-name="AI development card"], .hover-glow-card, .box-animated-card, [data-framer-name="Closed"] {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease !important;
+    position: relative !important;
+  }
+  .framer-s0rhwo:hover, [data-framer-name="AI development card"]:hover, .hover-glow-card:hover, .box-animated-card:hover {
+    transform: translateY(-8px) scale(1.018) !important;
+    border-color: rgba(129, 74, 200, 0.6) !important;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(129, 74, 200, 0.35) !important;
   }
 
   /* Responsive variant visibility */
@@ -232,7 +321,7 @@
     .hidden-1v36vhg, .hidden-h7qui { display: none !important; }
   }
 
-  /* ================= NAVBAR FIXES ================= */
+  /* ================= NAVBAR ================= */
   .framer-eumtsr-container {
     position: fixed !important;
     top: 18px !important;
@@ -328,7 +417,7 @@
     border: 1.5px solid rgba(37, 99, 235, 0.5) !important;
   }
 
-  /* ================= FAQ SECTION FULL WIDTH FIX ================= */
+  /* ================= FAQ SECTION ================= */
   .framer-ije8n0-container, .framer-ZAxah {
     width: 100% !important;
     max-width: 900px !important;
@@ -358,7 +447,7 @@
     transition: all 0.25s ease !important;
   }
   .framer-appDX:hover, [data-framer-name="Closed"]:hover {
-    border-color: rgba(37, 99, 235, 0.5) !important;
+    border-color: rgba(129, 74, 200, 0.5) !important;
     background: rgba(14, 18, 30, 0.95) !important;
   }
   .framer-1dijg4m, [data-framer-name="Question"] {
@@ -377,7 +466,7 @@
     line-height: 1.45 !important;
   }
 
-  /* ================= ANIMATIONS & SCROLL REVEAL ================= */
+  /* ================= SCROLL REVEAL ================= */
   .reveal-on-scroll {
     opacity: 0;
     transform: translateY(35px);
@@ -387,15 +476,6 @@
   .reveal-on-scroll.is-revealed {
     opacity: 1 !important;
     transform: translateY(0) !important;
-  }
-
-  .framer-s0rhwo, [data-framer-name="AI development card"], .hover-glow-card {
-    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease !important;
-  }
-  .framer-s0rhwo:hover, [data-framer-name="AI development card"]:hover, .hover-glow-card:hover {
-    transform: translateY(-8px) scale(1.015) !important;
-    border-color: rgba(37, 99, 235, 0.6) !important;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 30px rgba(37, 99, 235, 0.35) !important;
   }
 
   /* Logos Continuous Marquee */
@@ -436,9 +516,9 @@
   }
   .carousel-nav-btn:hover {
     transform: scale(1.1);
-    background: #2563eb;
-    border-color: #2563eb;
-    box-shadow: 0 0 25px rgba(37, 99, 235, 0.7);
+    background: #814ac8;
+    border-color: #814ac8;
+    box-shadow: 0 0 25px rgba(129, 74, 200, 0.7);
   }
 
   /* Section Subheadings */
@@ -472,8 +552,8 @@
     box-shadow: 0 4px 14px rgba(255, 255, 255, 0.3) !important;
   }
   .cal-day.available:not(.active):hover {
-    background: rgba(37, 99, 235, 0.3) !important;
-    border-color: #2563eb !important;
+    background: rgba(129, 74, 200, 0.3) !important;
+    border-color: #814ac8 !important;
   }
   .cal-day.disabled {
     opacity: 0.25;
@@ -496,8 +576,8 @@
     text-decoration: none;
   }
   .cal-slot-btn:hover {
-    background: #2563eb !important;
-    border-color: #2563eb !important;
+    background: #814ac8 !important;
+    border-color: #814ac8 !important;
   }
 
   /* Problem Card & Live Animations */
@@ -538,26 +618,26 @@
     background: rgba(10, 12, 20, 0.85);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: 1.5px solid rgba(59, 130, 246, 0.4);
+    border: 1.5px solid rgba(129, 74, 200, 0.4);
     border-radius: 100px;
     padding: 8px 18px 8px 10px;
     color: #ffffff;
     cursor: pointer;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(37, 99, 235, 0.35);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(129, 74, 200, 0.35);
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     user-select: none;
   }
   #sangam-ai-trigger:hover {
     transform: translateY(-3px) scale(1.03);
-    border-color: rgba(96, 165, 250, 0.8);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.85), 0 0 30px rgba(37, 99, 235, 0.6);
+    border-color: rgba(223, 122, 254, 0.8);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.85), 0 0 30px rgba(129, 74, 200, 0.6);
   }
   .ai-trigger-avatar {
     width: 38px;
     height: 38px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #2563eb;
+    border: 2px solid #814ac8;
   }
   .ai-sparkle-badge {
     position: absolute;
@@ -566,12 +646,12 @@
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #2563eb, #8b5cf6);
+    background: linear-gradient(135deg, #814ac8, #df7afe);
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1.5px solid #000;
-    box-shadow: 0 0 8px #60a5fa;
+    box-shadow: 0 0 8px #df7afe;
   }
   .ai-trigger-title {
     font-size: 13.5px;
@@ -583,7 +663,7 @@
   }
   .ai-trigger-subtitle {
     font-size: 11px;
-    color: #93c5fd;
+    color: #df7afe;
     font-weight: 500;
   }
   #sangam-ai-modal {
@@ -600,7 +680,7 @@
     -webkit-backdrop-filter: blur(28px) saturate(190%);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 24px;
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), 0 0 40px rgba(37, 99, 235, 0.25);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), 0 0 40px rgba(129, 74, 200, 0.25);
     flex-direction: column;
     overflow: hidden;
     z-index: 999999;
@@ -622,12 +702,12 @@
     height: 38px;
     border-radius: 50%;
     object-fit: cover;
-    border: 1.5px solid #2563eb;
+    border: 1.5px solid #814ac8;
   }
   .ai-gemini-pill {
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(139, 92, 246, 0.2));
-    border: 1px solid rgba(96, 165, 250, 0.35);
-    color: #93c5fd;
+    background: linear-gradient(135deg, rgba(129, 74, 200, 0.25), rgba(223, 122, 254, 0.25));
+    border: 1px solid rgba(223, 122, 254, 0.4);
+    color: #df7afe;
     font-size: 10px;
     font-weight: 600;
     padding: 2px 7px;
@@ -687,12 +767,12 @@
   }
   .ai-msg-user {
     align-self: flex-end;
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    background: linear-gradient(135deg, #814ac8, #6d28d9);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 16px 16px 4px 16px;
     padding: 12px 15px;
     color: #ffffff;
-    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4);
+    box-shadow: 0 4px 16px rgba(129, 74, 200, 0.4);
   }
   .ai-msg-action-btn {
     display: inline-flex;
@@ -715,9 +795,9 @@
     transform: translateY(-1px) scale(1.02);
   }
   .ai-chip {
-    background: rgba(37, 99, 235, 0.12);
-    border: 1px solid rgba(37, 99, 235, 0.3);
-    color: #93c5fd;
+    background: rgba(129, 74, 200, 0.15);
+    border: 1px solid rgba(223, 122, 254, 0.3);
+    color: #df7afe;
     font-size: 11.5px;
     font-weight: 500;
     padding: 6px 11px;
@@ -726,7 +806,7 @@
     transition: all 0.2s;
   }
   .ai-chip:hover {
-    background: rgba(37, 99, 235, 0.28);
+    background: rgba(129, 74, 200, 0.35);
     color: #ffffff;
     transform: translateY(-1px);
   }
@@ -745,8 +825,8 @@
     padding: 4px 6px 4px 14px;
   }
   .ai-input-form:focus-within {
-    border-color: #2563eb;
-    box-shadow: 0 0 15px rgba(37, 99, 235, 0.3);
+    border-color: #814ac8;
+    box-shadow: 0 0 15px rgba(129, 74, 200, 0.3);
   }
   .ai-chat-input {
     flex: 1;
@@ -763,7 +843,7 @@
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    background: #2563eb;
+    background: #814ac8;
     border: none;
     color: #ffffff;
     display: flex;
@@ -775,13 +855,13 @@
   }
   .ai-send-btn:hover {
     transform: scale(1.05);
-    background: #1d4ed8;
+    background: #6d28d9;
   }
   .ai-typing-dot {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #60a5fa;
+    background: #df7afe;
     animation: aiTypingBounce 1.4s infinite ease-in-out;
     display: inline-block;
   }
@@ -812,7 +892,7 @@
 
     <div id="sf-cards-track" style="position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
       
-        <div class="sf-video-card" data-index="0" data-videoid="2CEge_tIkWQ" style="position: absolute; width: 290px; height: 515px; border-radius: 20px; overflow: hidden; background: #06060a; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.8); cursor: pointer; transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease, filter 0.45s ease; will-change: transform, opacity;">
+        <div class="sf-video-card box-animated-card" data-index="0" data-videoid="2CEge_tIkWQ" style="position: absolute; width: 290px; height: 515px; border-radius: 20px; overflow: hidden; background: #06060a; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.8); cursor: pointer; transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease, filter 0.45s ease; will-change: transform, opacity;">
           <img src="https://i.ytimg.com/vi_webp/2CEge_tIkWQ/maxresdefault.webp" alt="Short Form Edit 1" style="width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none;">
           <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.65) 100%); pointer-events: none;"></div>
           <div class="sf-play-btn" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 56px; height: 56px; border-radius: 50%; background: rgba(37, 99, 235, 0.9); backdrop-filter: blur(10px); border: 1.5px solid rgba(255,255,255,0.4); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 25px rgba(37, 99, 235, 0.8); transition: transform 0.2s ease;">
@@ -821,7 +901,7 @@
           <div class="sf-iframe-wrapper" style="position: absolute; inset: 0; display: none; background: #000; z-index: 5;"></div>
         </div>
       
-        <div class="sf-video-card" data-index="1" data-videoid="zo17tT74bGQ" style="position: absolute; width: 290px; height: 515px; border-radius: 20px; overflow: hidden; background: #06060a; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.8); cursor: pointer; transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease, filter 0.45s ease; will-change: transform, opacity;">
+        <div class="sf-video-card box-animated-card" data-index="1" data-videoid="zo17tT74bGQ" style="position: absolute; width: 290px; height: 515px; border-radius: 20px; overflow: hidden; background: #06060a; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.8); cursor: pointer; transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease, filter 0.45s ease; will-change: transform, opacity;">
           <img src="https://i.ytimg.com/vi_webp/zo17tT74bGQ/maxresdefault.webp" alt="Short Form Edit 2" style="width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none;">
           <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.65) 100%); pointer-events: none;"></div>
           <div class="sf-play-btn" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 56px; height: 56px; border-radius: 50%; background: rgba(37, 99, 235, 0.9); backdrop-filter: blur(10px); border: 1.5px solid rgba(255,255,255,0.4); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 25px rgba(37, 99, 235, 0.8); transition: transform 0.2s ease;">
@@ -830,7 +910,7 @@
           <div class="sf-iframe-wrapper" style="position: absolute; inset: 0; display: none; background: #000; z-index: 5;"></div>
         </div>
       
-        <div class="sf-video-card" data-index="2" data-videoid="IKxMZPth_Bo" style="position: absolute; width: 290px; height: 515px; border-radius: 20px; overflow: hidden; background: #06060a; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.8); cursor: pointer; transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease, filter 0.45s ease; will-change: transform, opacity;">
+        <div class="sf-video-card box-animated-card" data-index="2" data-videoid="IKxMZPth_Bo" style="position: absolute; width: 290px; height: 515px; border-radius: 20px; overflow: hidden; background: #06060a; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.8); cursor: pointer; transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease, filter 0.45s ease; will-change: transform, opacity;">
           <img src="https://i.ytimg.com/vi_webp/IKxMZPth_Bo/maxresdefault.webp" alt="Short Form Edit 3" style="width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none;">
           <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.65) 100%); pointer-events: none;"></div>
           <div class="sf-play-btn" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 56px; height: 56px; border-radius: 50%; background: rgba(37, 99, 235, 0.9); backdrop-filter: blur(10px); border: 1.5px solid rgba(255,255,255,0.4); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 25px rgba(37, 99, 235, 0.8); transition: transform 0.2s ease;">
@@ -839,7 +919,7 @@
           <div class="sf-iframe-wrapper" style="position: absolute; inset: 0; display: none; background: #000; z-index: 5;"></div>
         </div>
       
-        <div class="sf-video-card" data-index="3" data-videoid="9C5ZnR3CUC8" style="position: absolute; width: 290px; height: 515px; border-radius: 20px; overflow: hidden; background: #06060a; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.8); cursor: pointer; transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease, filter 0.45s ease; will-change: transform, opacity;">
+        <div class="sf-video-card box-animated-card" data-index="3" data-videoid="9C5ZnR3CUC8" style="position: absolute; width: 290px; height: 515px; border-radius: 20px; overflow: hidden; background: #06060a; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.8); cursor: pointer; transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease, filter 0.45s ease; will-change: transform, opacity;">
           <img src="https://i.ytimg.com/vi_webp/9C5ZnR3CUC8/maxresdefault.webp" alt="Short Form Edit 4" style="width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none;">
           <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.65) 100%); pointer-events: none;"></div>
           <div class="sf-play-btn" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 56px; height: 56px; border-radius: 50%; background: rgba(37, 99, 235, 0.9); backdrop-filter: blur(10px); border: 1.5px solid rgba(255,255,255,0.4); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 25px rgba(37, 99, 235, 0.8); transition: transform 0.2s ease;">
@@ -848,7 +928,7 @@
           <div class="sf-iframe-wrapper" style="position: absolute; inset: 0; display: none; background: #000; z-index: 5;"></div>
         </div>
       
-        <div class="sf-video-card" data-index="4" data-videoid="NSSunpt8ysY" style="position: absolute; width: 290px; height: 515px; border-radius: 20px; overflow: hidden; background: #06060a; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.8); cursor: pointer; transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease, filter 0.45s ease; will-change: transform, opacity;">
+        <div class="sf-video-card box-animated-card" data-index="4" data-videoid="NSSunpt8ysY" style="position: absolute; width: 290px; height: 515px; border-radius: 20px; overflow: hidden; background: #06060a; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.8); cursor: pointer; transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease, filter 0.45s ease; will-change: transform, opacity;">
           <img src="https://i.ytimg.com/vi_webp/NSSunpt8ysY/maxresdefault.webp" alt="Short Form Edit 5" style="width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none;">
           <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.65) 100%); pointer-events: none;"></div>
           <div class="sf-play-btn" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 56px; height: 56px; border-radius: 50%; background: rgba(37, 99, 235, 0.9); backdrop-filter: blur(10px); border: 1.5px solid rgba(255,255,255,0.4); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 25px rgba(37, 99, 235, 0.8); transition: transform 0.2s ease;">
@@ -882,23 +962,23 @@
 
     <div id="gd-cards-track" style="position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
       
-      <div class="gd-card" data-index="0" style="position: absolute; width: 560px; max-width: 82vw; height: 315px; border-radius: 18px; overflow: hidden; background: #08080c; border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 20px 50px rgba(0,0,0,0.85); cursor: pointer; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease; will-change: transform, opacity;">
+      <div class="gd-card box-animated-card" data-index="0" style="position: absolute; width: 560px; max-width: 82vw; height: 315px; border-radius: 18px; overflow: hidden; background: #08080c; border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 20px 50px rgba(0,0,0,0.85); cursor: pointer; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease; will-change: transform, opacity;">
         <img src="https://framerusercontent.com/images/e590CJZlO4krAAuQYrIcYKQ35A.png" alt="Thumbnail Design 1" style="width: 100%; height: 100%; object-fit: cover; display: block;">
       </div>
 
-      <div class="gd-card" data-index="1" style="position: absolute; width: 560px; max-width: 82vw; height: 315px; border-radius: 18px; overflow: hidden; background: #08080c; border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 20px 50px rgba(0,0,0,0.85); cursor: pointer; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease; will-change: transform, opacity;">
+      <div class="gd-card box-animated-card" data-index="1" style="position: absolute; width: 560px; max-width: 82vw; height: 315px; border-radius: 18px; overflow: hidden; background: #08080c; border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 20px 50px rgba(0,0,0,0.85); cursor: pointer; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease; will-change: transform, opacity;">
         <img src="https://framerusercontent.com/images/dWinzHZxDHUHnqV4tIY4zRhtN0Y.png" alt="Thumbnail Design 2" style="width: 100%; height: 100%; object-fit: cover; display: block;">
       </div>
 
-      <div class="gd-card" data-index="2" style="position: absolute; width: 560px; max-width: 82vw; height: 315px; border-radius: 18px; overflow: hidden; background: #08080c; border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 20px 50px rgba(0,0,0,0.85); cursor: pointer; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease; will-change: transform, opacity;">
+      <div class="gd-card box-animated-card" data-index="2" style="position: absolute; width: 560px; max-width: 82vw; height: 315px; border-radius: 18px; overflow: hidden; background: #08080c; border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 20px 50px rgba(0,0,0,0.85); cursor: pointer; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease; will-change: transform, opacity;">
         <img src="https://framerusercontent.com/images/03mUApK8d8KMvyBC3WkvLNk4H0.png" alt="Thumbnail Design 3" style="width: 100%; height: 100%; object-fit: cover; display: block;">
       </div>
 
-      <div class="gd-card" data-index="3" style="position: absolute; width: 560px; max-width: 82vw; height: 315px; border-radius: 18px; overflow: hidden; background: #08080c; border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 20px 50px rgba(0,0,0,0.85); cursor: pointer; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease; will-change: transform, opacity;">
+      <div class="gd-card box-animated-card" data-index="3" style="position: absolute; width: 560px; max-width: 82vw; height: 315px; border-radius: 18px; overflow: hidden; background: #08080c; border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 20px 50px rgba(0,0,0,0.85); cursor: pointer; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease; will-change: transform, opacity;">
         <img src="https://framerusercontent.com/images/tuOGX5P9sa4OELHVhGa0X6krNMo.png" alt="Thumbnail Design 4" style="width: 100%; height: 100%; object-fit: cover; display: block;">
       </div>
 
-      <div class="gd-card" data-index="4" style="position: absolute; width: 560px; max-width: 82vw; height: 315px; border-radius: 18px; overflow: hidden; background: #08080c; border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 20px 50px rgba(0,0,0,0.85); cursor: pointer; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease; will-change: transform, opacity;">
+      <div class="gd-card box-animated-card" data-index="4" style="position: absolute; width: 560px; max-width: 82vw; height: 315px; border-radius: 18px; overflow: hidden; background: #08080c; border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 20px 50px rgba(0,0,0,0.85); cursor: pointer; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease; will-change: transform, opacity;">
         <img src="https://framerusercontent.com/images/BwEvvH2YvKKOT7H942fLT5Py5Q.png" alt="Thumbnail Design 5" style="width: 100%; height: 100%; object-fit: cover; display: block;">
       </div>
 
@@ -936,7 +1016,7 @@
 
   <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;" class="problem-grid">
     <!-- CARD 1 -->
-    <div class="shuvam-problem-card hover-glow-card" style="background: #0a0a0f; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 20px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6); position: relative; overflow: hidden; font-family: 'Figtree', sans-serif;">
+    <div class="shuvam-problem-card hover-glow-card box-animated-card" style="background: #0a0a0f; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 20px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6); position: relative; overflow: hidden; font-family: 'Figtree', sans-serif;">
       <div style="background: #040407; border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 14px; padding: 18px 18px 12px 18px; position: relative; overflow: hidden; height: 210px; display: flex; flex-direction: column; justify-content: space-between;">
         <div>
           <span style="font-family: 'Figtree', sans-serif; font-size: 11px; color: rgba(255, 255, 255, 0.45); font-weight: 500; display: block; margin-bottom: 2px;">Views</span>
@@ -977,7 +1057,7 @@
     </div>
 
     <!-- CARD 2 -->
-    <div class="shuvam-problem-card hover-glow-card" style="background: #0a0a0f; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 20px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6); position: relative; overflow: hidden; font-family: 'Figtree', sans-serif;">
+    <div class="shuvam-problem-card hover-glow-card box-animated-card" style="background: #0a0a0f; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 20px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6); position: relative; overflow: hidden; font-family: 'Figtree', sans-serif;">
       <div style="background: #040407; border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 14px; padding: 18px; position: relative; overflow: hidden; height: 210px; display: flex; align-items: center; justify-content: center;">
         <div style="position: absolute; top: 16px; left: 18px; z-index: 2;">
           <span style="font-family: 'Figtree', sans-serif; font-size: 11px; color: rgba(255, 255, 255, 0.45); font-weight: 500; display: block; margin-bottom: 2px;">Engagement</span>
@@ -1009,7 +1089,7 @@
     </div>
 
     <!-- CARD 3 -->
-    <div class="shuvam-problem-card hover-glow-card" style="background: #0a0a0f; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 20px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6); position: relative; overflow: hidden; font-family: 'Figtree', sans-serif;">
+    <div class="shuvam-problem-card hover-glow-card box-animated-card" style="background: #0a0a0f; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 20px; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6); position: relative; overflow: hidden; font-family: 'Figtree', sans-serif;">
       <div style="background: #040407; border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 14px; padding: 18px; position: relative; overflow: hidden; height: 210px; display: flex; flex-direction: column; justify-content: space-between;">
         <div>
           <span style="font-family: 'Figtree', sans-serif; font-size: 11px; color: rgba(255, 255, 255, 0.45); font-weight: 500; display: block; margin-bottom: 2px;">Consistency</span>
@@ -1232,7 +1312,7 @@
     
     <!-- End of bodyEnd -->
 
-<!-- Interactive Particles Canvas Background -->
+<!-- Starry Particle Canvas Background (Exact Match to cutsbyshivam.framer.website) -->
 <canvas id="sangam-particles-canvas"></canvas>
 
 <!-- Gemini AI Chatbot Widget -->
@@ -1245,7 +1325,7 @@
       </div>
     </div>
     <div style="display: flex; flex-direction: column; text-align: left;">
-      <span class="ai-trigger-title">Talk with AI <span style="color: #60a5fa; font-size: 11px;">✦</span></span>
+      <span class="ai-trigger-title">Talk with AI <span style="color: #df7afe; font-size: 11px;">✦</span></span>
       <span class="ai-trigger-subtitle">Powered by Gemini</span>
     </div>
   </div>
@@ -1258,7 +1338,7 @@
           <div style="font-size: 14.5px; font-weight: 700; color: #ffffff; display: flex; align-items: center; gap: 6px;">
             Sangam AI
             <span class="ai-gemini-pill">
-              <svg width="8" height="8" viewBox="0 0 24 24" fill="#93c5fd"><path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z"/></svg>
+              <svg width="8" height="8" viewBox="0 0 24 24" fill="#df7afe"><path d="M12 2L14.4 9.6L22 12L14.4 14.4L12 22L9.6 14.4L2 12L9.6 9.6L12 2Z"/></svg>
               Gemini
             </span>
           </div>
@@ -1299,7 +1379,7 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // ================= 1. INTERACTIVE PARTICLES BACKGROUND =================
+  // ================= 1. STARRY NIGHT PARTICLES (EXACT MATCH TO CUTSBYSHIVAM) =================
   const canvas = document.getElementById('sangam-particles-canvas');
   if (canvas) {
     const ctx = canvas.getContext('2d');
@@ -1312,91 +1392,79 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     const particles = [];
-    const particleCount = Math.min(Math.floor(window.innerWidth / 20), 55);
+    const count = Math.min(Math.floor(window.innerWidth / 12), 110);
 
-    const colors = [
-      { r: 59, g: 130, b: 246 },  // Blue
-      { r: 99, g: 102, b: 241 },  // Indigo
-      { r: 147, g: 51, b: 234 },  // Purple
-      { r: 56, g: 189, b: 248 }   // Cyan
-    ];
-
-    for (let i = 0; i < particleCount; i++) {
-      const col = colors[Math.floor(Math.random() * colors.length)];
+    for (let i = 0; i < count; i++) {
       particles.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.45,
-        vy: (Math.random() - 0.5) * 0.45,
-        radius: Math.random() * 2 + 1,
-        color: col,
-        alpha: Math.random() * 0.6 + 0.25,
-        pulseSpeed: Math.random() * 0.02 + 0.01,
-        pulse: Math.random() * Math.PI
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+        baseRadius: Math.random() * 1.4 + 0.6,
+        alpha: Math.random() * 0.7 + 0.2,
+        twinkleSpeed: Math.random() * 0.03 + 0.015,
+        twinklePhase: Math.random() * Math.PI * 2
       });
     }
 
-    let mouseX = -1000, mouseY = -1000;
+    let mouseX = width / 2, mouseY = height / 2;
+    let targetParallaxX = 0, targetParallaxY = 0;
+    let currentParallaxX = 0, currentParallaxY = 0;
+
     window.addEventListener('mousemove', (e) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
+      targetParallaxX = (mouseX - width / 2) * 0.015;
+      targetParallaxY = (mouseY - height / 2) * 0.015;
     });
 
-    function renderParticles() {
+    function renderStarryParticles() {
       ctx.clearRect(0, 0, width, height);
 
-      // Draw and connect particles
+      currentParallaxX += (targetParallaxX - currentParallaxX) * 0.05;
+      currentParallaxY += (targetParallaxY - currentParallaxY) * 0.05;
+
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i];
 
         p.x += p.vx;
         p.y += p.vy;
-        p.pulse += p.pulseSpeed;
+        p.twinklePhase += p.twinkleSpeed;
 
         if (p.x < 0) p.x = width;
         if (p.x > width) p.x = 0;
         if (p.y < 0) p.y = height;
         if (p.y > height) p.y = 0;
 
-        const currentAlpha = p.alpha + Math.sin(p.pulse) * 0.2;
-        const finalAlpha = Math.max(0.1, Math.min(0.85, currentAlpha));
+        const currentAlpha = p.alpha + Math.sin(p.twinklePhase) * 0.25;
+        const clampedAlpha = Math.max(0.1, Math.min(1.0, currentAlpha));
 
-        // Draw particle glow
-        const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius * 3);
-        grad.addColorStop(0, 'rgba(' + p.color.r + ',' + p.color.g + ',' + p.color.b + ',' + finalAlpha + ')');
-        grad.addColorStop(1, 'rgba(' + p.color.r + ',' + p.color.g + ',' + p.color.b + ',0)');
-        ctx.fillStyle = grad;
+        const drawX = p.x + currentParallaxX * (p.baseRadius / 2);
+        const drawY = p.y + currentParallaxY * (p.baseRadius / 2);
+
+        // Draw star particle
+        ctx.fillStyle = 'rgba(255, 255, 255, ' + clampedAlpha + ')';
         ctx.beginPath();
-        ctx.arc(p.x, p.y, p.radius * 3, 0, Math.PI * 2);
+        ctx.arc(drawX, drawY, p.baseRadius, 0, Math.PI * 2);
         ctx.fill();
 
-        // Draw links between nearby particles
-        for (let j = i + 1; j < particles.length; j++) {
-          const p2 = particles[j];
-          const dx = p.x - p2.x;
-          const dy = p.y - p2.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-
-          if (dist < 130) {
-            const linkAlpha = (1 - dist / 130) * 0.18;
-            ctx.strokeStyle = 'rgba(59, 130, 246, ' + linkAlpha + ')';
-            ctx.lineWidth = 0.8;
-            ctx.beginPath();
-            ctx.moveTo(p.x, p.y);
-            ctx.lineTo(p2.x, p2.y);
-            ctx.stroke();
-          }
+        // Extra soft glow for brighter stars
+        if (clampedAlpha > 0.6) {
+          ctx.fillStyle = 'rgba(255, 255, 255, ' + (clampedAlpha * 0.3) + ')';
+          ctx.beginPath();
+          ctx.arc(drawX, drawY, p.baseRadius * 2.2, 0, Math.PI * 2);
+          ctx.fill();
         }
       }
 
-      requestAnimationFrame(renderParticles);
+      requestAnimationFrame(renderStarryParticles);
     }
 
-    renderParticles();
+    renderStarryParticles();
   }
 
   // ================= 2. SCROLL REVEAL ANIMATIONS =================
-  const revealElements = document.querySelectorAll('section, .reveal-on-scroll, .framer-s0rhwo, .shuvam-problem-card');
+  const revealElements = document.querySelectorAll('section, .reveal-on-scroll, .framer-s0rhwo, .shuvam-problem-card, [data-framer-name="AI development card"]');
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -1485,8 +1553,8 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.filter = 'none';
         card.style.zIndex = '5';
         card.style.pointerEvents = 'auto';
-        card.style.borderColor = 'rgba(37, 99, 235, 0.7)';
-        card.style.boxShadow = '0 25px 60px rgba(0,0,0,0.9), 0 0 35px rgba(37, 99, 235, 0.4)';
+        card.style.borderColor = 'rgba(129, 74, 200, 0.7)';
+        card.style.boxShadow = '0 25px 60px rgba(0,0,0,0.9), 0 0 35px rgba(129, 74, 200, 0.4)';
       } else if (idx === leftIdx) {
         card.style.transform = 'translateX(-290px) scale(0.85)';
         card.style.opacity = '0.5';
@@ -1514,7 +1582,7 @@ document.addEventListener('DOMContentLoaded', function() {
     dots.forEach((dot, idx) => {
       if (idx === sfCurrentIndex) {
         dot.style.width = '24px';
-        dot.style.background = '#2563eb';
+        dot.style.background = '#814ac8';
       } else {
         dot.style.width = '8px';
         dot.style.background = 'rgba(255,255,255,0.2)';
@@ -1584,8 +1652,8 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.transform = 'translateX(0px) scale(1)';
         card.style.opacity = '1';
         card.style.zIndex = '5';
-        card.style.borderColor = 'rgba(37, 99, 235, 0.8)';
-        card.style.boxShadow = '0 25px 60px rgba(0,0,0,0.9), 0 0 35px rgba(37, 99, 235, 0.4)';
+        card.style.borderColor = 'rgba(129, 74, 200, 0.8)';
+        card.style.boxShadow = '0 25px 60px rgba(0,0,0,0.9), 0 0 35px rgba(129, 74, 200, 0.4)';
         card.style.pointerEvents = 'auto';
       } else if (idx === leftIdx) {
         card.style.transform = 'translateX(-380px) scale(0.82)';
@@ -1612,7 +1680,7 @@ document.addEventListener('DOMContentLoaded', function() {
     dots.forEach((dot, idx) => {
       if (idx === gdCurrentIndex) {
         dot.style.width = '24px';
-        dot.style.background = '#2563eb';
+        dot.style.background = '#814ac8';
       } else {
         dot.style.width = '8px';
         dot.style.background = 'rgba(255,255,255,0.2)';
